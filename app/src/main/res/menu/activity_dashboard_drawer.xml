@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_enrol"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/action_enrol" />
+        <item
+            android:id="@+id/nav_panels"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/action_panels" />
+        <item
+            android:id="@+id/nav_tests"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/action_test" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/action_feedback" />
+    </group>
+
+    <item android:title="Under the Hood">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/action_profile" />
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/action_help" />
+            <item
+                android:id="@+id/nav_signout"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/action_signout" />
+        </menu>
+    </item>
+
+</menu>
