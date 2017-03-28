@@ -1,19 +1,19 @@
 package pt.rht.Models;
 
 /**
- * Created by ilabafrica on 23/03/2017.
+ * Created by Kitsao on 23/03/2017.
  */
 
-public class Set {
+public class Designation {
     long id;
     String title;
 
     // constructors
-    public Set(long id, String title){
+    public Designation(long id, String title){
         this.id = id;
         this.title = title;
     }
-    public Set() {
+    public Designation() {
     }
     // setters
     public void setId(long id) {

@@ -5,23 +5,35 @@ package pt.rht.Models;
  */
 
 public class Enrolment {
-    int id;
+    long id;
     int userId;
-    String facility;
-    String mfl;
-    String program;
-    String designation;
-    String addFailure;
+    int facility;
+    int mfl;
+    int program;
+    int designation;
+    int addFailure;
     String comment;
     String created_at;
     String updated_at;
 
     // constructors
+    public Enrolment(long id, int userId, int facility, int mfl, int program, int designation, int addFailure, String comment, String created_at, String updated_at){
+        this.id = id;
+        this.userId = userId;
+        this.facility = facility;
+        this.mfl = mfl;
+        this.program = program;
+        this.designation = designation;
+        this.addFailure = addFailure;
+        this.comment = comment;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
+    }
     public Enrolment() {
     }
 
     // setters
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -29,23 +41,23 @@ public class Enrolment {
         this.userId = userId;
     }
 
-    public void setFacility(String facility) {
+    public void setFacility(int facility) {
         this.facility = facility;
     }
 
-    public void setMfl(String mfl) {
+    public void setMfl(int mfl) {
         this.mfl = mfl;
     }
 
-    public void setProgram(String program) {
+    public void setProgram(int program) {
         this.program = program;
     }
 
-    public void setDesignation(String designation) {
+    public void setDesignation(int designation) {
         this.designation = designation;
     }
 
-    public void setAddFailure(String addFailure) {
+    public void setAddFailure(int addFailure) {
         this.addFailure = addFailure;
     }
 
@@ -62,7 +74,7 @@ public class Enrolment {
     }
 
     // getters
-    public int getId() {
+    public long getId() {
         return this.id;
     }
 
@@ -70,23 +82,23 @@ public class Enrolment {
         return this.userId;
     }
 
-    public String setFacility() {
+    public int getFacility() {
         return this.facility;
     }
 
-    public String setMfl() {
+    public int getMfl() {
         return this.mfl;
     }
 
-    public String setProgram() {
+    public int getProgram() {
         return this.program;
     }
 
-    public String setDesignation() {
+    public int getDesignation() {
         return this.designation;
     }
 
-    public String setAddFailure() {
+    public int getAddFailure() {
         return this.addFailure;
     }
 

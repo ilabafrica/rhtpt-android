@@ -13,7 +13,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent = new Intent(this, DashboardActivity.class);
+        Intent intent = new Intent(this, RegUserInfoActivity.class);
         startActivity(intent);
         finish();
     }

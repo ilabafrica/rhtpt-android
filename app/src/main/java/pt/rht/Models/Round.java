@@ -5,16 +5,22 @@ package pt.rht.Models;
  */
 
 public class Round {
-    int id;
+    long id;
     String title;
     String starts;
     String ends;
 
     // constructors
+    public Round(long id, String title, String starts, String ends){
+        this.id = id;
+        this.title = title;
+        this.starts = starts;
+        this.ends = ends;
+    }
     public Round() {
     }
     // setters
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -31,19 +37,19 @@ public class Round {
     }
 
     // getters
-    public int getId() {
+    public long getId() {
         return this.id;
     }
 
-    public String setTitle() {
+    public String getTitle() {
         return this.title;
     }
 
-    public String setStarts() {
+    public String getStarts() {
         return this.starts;
     }
 
-    public String setEnds() {
+    public String getEnds() {
         return this.ends;
     }
 }

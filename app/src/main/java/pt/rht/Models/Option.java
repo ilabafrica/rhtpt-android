@@ -5,14 +5,18 @@ package pt.rht.Models;
  */
 
 public class Option {
-    int id;
+    long id;
     String title;
 
     // constructors
+    public Option(long id, String title){
+        this.id = id;
+        this.title = title;
+    }
     public Option() {
     }
     // setters
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -21,11 +25,11 @@ public class Option {
     }
 
     // getters
-    public int getId() {
+    public long getId() {
         return this.id;
     }
 
-    public String setTitle() {
+    public String getTitle() {
         return this.title;
     }
 }

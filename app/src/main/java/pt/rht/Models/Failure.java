@@ -5,14 +5,18 @@ package pt.rht.Models;
  */
 
 public class Failure {
-    int id;
+    long id;
     String title;
 
     // constructors
+    public Failure(long id, String title){
+        this.id = id;
+        this.title = title;
+    }
     public Failure() {
     }
     // setters
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -21,7 +25,7 @@ public class Failure {
     }
 
     // getters
-    public int getId() {
+    public long getId() {
         return this.id;
     }
 

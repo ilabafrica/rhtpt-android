@@ -32,8 +32,8 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_full_name"
                     android:inputType="text"
-                    android:maxLines="1"
-                    android:singleLine="true" />
+                    android:padding="@dimen/view_padding"
+                    android:textSize="@dimen/add_edit_textsize" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -45,10 +45,8 @@
                     android:id="@+id/gender"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_gender"
-                    android:inputType="text"
-                    android:maxLines="1"
-                    android:singleLine="true" />
+                    android:hint="@string/prompt_uid"
+                    android:inputType="text" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -61,9 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_dob"
-                    android:inputType="date"
-                    android:maxLines="1"
-                    android:singleLine="true" />
+                    android:inputType="date"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -77,25 +73,52 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_mobile_number"
                     android:inputType="phone"
-                    android:maxLines="1"
-                    android:singleLine="true" />
+                    android:padding="@dimen/view_padding"
+                    android:textSize="@dimen/add_edit_textsize" />
 
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/view_padding">
 
-                <EditText
-                    android:id="@+id/email_address"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/text_view_gender"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_email_address"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:singleLine="true" />
+                    android:text="@string/prompt_gender"
+                    android:textSize="@dimen/add_edit_textsize"
+                    android:paddingRight="25dp"/>
+                <RadioGroup
+                    android:id="@+id/radio_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="25dp"
+                    >
 
-            </android.support.design.widget.TextInputLayout>
+
+                    <RadioButton
+                        android:id="@+id/radio_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_male"
+                        android:textSize="@dimen/add_edit_textsize"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_female"
+                        android:textSize="@dimen/add_edit_textsize"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -110,26 +133,8 @@
                     android:imeActionLabel="@string/action_sign_in_short"
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/repeat_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/prompt_password"
-                    android:imeActionId="@+id/login"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionUnspecified"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true" />
+                    android:padding="@dimen/view_padding"
+                    android:textSize="@dimen/add_edit_textsize" />
 
             </android.support.design.widget.TextInputLayout>
 

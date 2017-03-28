@@ -5,7 +5,7 @@ package pt.rht.Models;
  */
 
 public class Field {
-    int id;
+    long id;
     int sId;
     String title;
     int tag;
@@ -19,10 +19,16 @@ public class Field {
     public final static int TEXT = 7;
 
     // constructors
+    public Field(long id, int sId, String title, int tag){
+        this.id = id;
+        this.sId = sId;
+        this.title = title;
+        this.tag = tag;
+    }
     public Field() {
     }
     // setters
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -39,7 +45,7 @@ public class Field {
     }
 
     // getters
-    public int getId() {
+    public long getId() {
         return this.id;
     }
 
@@ -47,7 +53,7 @@ public class Field {
         return this.sId;
     }
 
-    public String setTitle() {
+    public String getTitle() {
         return this.title;
     }
 

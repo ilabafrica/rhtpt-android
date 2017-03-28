@@ -5,17 +5,24 @@ package pt.rht.Models;
  */
 
 public class Feedback {
-    int id;
+    long id;
     String round;
     String feedback;
     String comment;
     String created_at;
 
     // constructors
+    public Feedback(long id, String round, String feedback, String comment, String created_at){
+        this.id = id;
+        this.round = round;
+        this.feedback = feedback;
+        this.comment = comment;
+        this.created_at = created_at;
+    }
     public Feedback() {
     }
     // setters
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -31,12 +38,12 @@ public class Feedback {
         this.comment = comment;
     }
 
-    public void setCreated_at(String created_at) {
+    public void setCreatedAt(String created_at) {
         this.created_at = created_at;
     }
 
     // getters
-    public int getId() {
+    public long getId() {
         return this.id;
     }
 
@@ -52,7 +59,7 @@ public class Feedback {
         return this.comment;
     }
 
-    public String getCreated_at() {
+    public String getCreatedAt() {
         return this.created_at;
     }
 }

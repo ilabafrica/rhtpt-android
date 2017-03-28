@@ -5,20 +5,26 @@ package pt.rht.Models;
  */
 
 public class Pt {
-    int id;
+    long id;
     int rId;
     String created_at;
     String updated_at;
 
     // constructors
+    public Pt(long id, int rId, String created_at, String updated_at){
+        this.id = id;
+        this.rId = rId;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
+    }
     public Pt() {
     }
     // setters
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public void setrId(String title) {
+    public void setrId(int rId) {
         this.rId = rId;
     }
 
@@ -31,7 +37,7 @@ public class Pt {
     }
 
     // getters
-    public int getId() {
+    public long getId() {
         return this.id;
     }
 

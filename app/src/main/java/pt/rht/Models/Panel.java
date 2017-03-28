@@ -5,21 +5,28 @@ package pt.rht.Models;
  */
 
 public class Panel {
-    int id;
+    long id;
     int rId;
     String rDate;
     int panels;
     String receiver;
 
     // constructors
+    public Panel(long id, int rId, String rDate, int panels, String receiver){
+        this.id = id;
+        this.rId = rId;
+        this.rDate = rDate;
+        this.panels = panels;
+        this.receiver = receiver;
+    }
     public Panel() {
     }
     // setters
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public void setrId(String title) {
+    public void setrId(int rId) {
         this.rId = rId;
     }
 
@@ -36,7 +43,7 @@ public class Panel {
     }
 
     // getters
-    public int getId() {
+    public long getId() {
         return this.id;
     }
 

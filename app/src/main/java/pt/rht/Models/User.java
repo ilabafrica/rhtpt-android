@@ -5,7 +5,7 @@ package pt.rht.Models;
  */
 
 public class User {
-    int id;
+    long id;
     String fullName;
     int gender;
     int uid;
@@ -18,10 +18,23 @@ public class User {
     String updated_at;
 
     // constructors
+    public User(long id, String fullName, int gender, int uid, String dob, String mobile, String email, String username, String password, String created_at, String updated_at){
+        this.id = id;
+        this.fullName = fullName;
+        this.gender = gender;
+        this.uid = uid;
+        this.dob = dob;
+        this.mobile = mobile;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
+    }
     public User() {
     }
     // setters
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -66,7 +79,7 @@ public class User {
     }
 
     // getters
-    public int getId() {
+    public long getId() {
         return this.id;
     }
 

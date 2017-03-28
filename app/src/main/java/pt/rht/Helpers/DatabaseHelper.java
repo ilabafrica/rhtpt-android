@@ -40,93 +40,99 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "rhtpt";
 
     // Table Names
-    private static final String TABLE_USER = "users";
-    private static final String TABLE_FAILURE = "failures";
-    private static final String TABLE_ENROL = "enrollments";
-    private static final String TABLE_ROUND = "rounds";
-    private static final String TABLE_PANEL = "panels";
-    private static final String TABLE_SET = "sets";
-    private static final String TABLE_FIELD = "fields";
-    private static final String TABLE_OPTION = "options";
-    private static final String TABLE_FIELD_OPTION = "field_options";
-    private static final String TABLE_PT = "pt";
-    private static final String TABLE_RESULT = "results";
-    private static final String TABLE_FEEDBACK = "feedback";
+    public static final String TABLE_USER = "users";
+    public static final String TABLE_FACILITY = "facilities";
+    public static final String TABLE_FAILURE = "failures";
+    public static final String TABLE_DESIGNATION = "designation";
+    public static final String TABLE_ENROL = "enrollments";
+    public static final String TABLE_ROUND = "rounds";
+    public static final String TABLE_PANEL = "panels";
+    public static final String TABLE_SET = "sets";
+    public static final String TABLE_FIELD = "fields";
+    public static final String TABLE_OPTION = "options";
+    public static final String TABLE_FIELD_OPTION = "field_options";
+    public static final String TABLE_PT = "pt";
+    public static final String TABLE_RESULT = "results";
+    public static final String TABLE_FEEDBACK = "feedback";
 
     // Common column names
-    private static final String KEY_ID = "id";
-    private static final String KEY_CREATED_AT = "created_at";
-    private static final String KEY_UPDATED_AT = "updated_at";
-    private static final String KEY_TITLE = "title";
-    private static final String KEY_RID = "rId";
-    private static final String KEY_FID = "fId";
-    private static final String KEY_COMMENT = "comment";
+    public static final String KEY_ID = "id";
+    public static final String KEY_CREATED_AT = "created_at";
+    public static final String KEY_UPDATED_AT = "updated_at";
+    public static final String KEY_TITLE = "title";
+    public static final String KEY_RID = "rId";
+    public static final String KEY_FID = "fId";
+    public static final String KEY_COMMENT = "comment";
 
     // USERS Table - column names
-    private static final String KEY_NAME = "name";
-    private static final String KEY_GENDER = "gender";
-    private static final String KEY_UID = "uid";
-    private static final String KEY_DOB = "dob";
-    private static final String KEY_MOBILE = "mobile";
-    private static final String KEY_EMAIL = "email";
-    private static final String KEY_USERNAME = "username";
-    private static final String KEY_PASSWORD = "password";
-    //private static final String KEY_CREATED_AT = "created_at";
-    //private static final String KEY_UPDATED_AT = "updated_at";
+    public static final String KEY_NAME = "name";
+    public static final String KEY_GENDER = "gender";
+    public static final String KEY_UID = "uid";
+    public static final String KEY_DOB = "dob";
+    public static final String KEY_MOBILE = "mobile";
+    public static final String KEY_EMAIL = "email";
+    public static final String KEY_USERNAME = "username";
+    public static final String KEY_PASSWORD = "password";
+    //public static final String KEY_CREATED_AT = "created_at";
+    //public static final String KEY_UPDATED_AT = "updated_at";
 
     // FAILURES Table - column names
-    //private static final String KEY_TITLE = "title";
+    //public static final String KEY_TITLE = "title";
+
+    // DESIGNATION Table - column names
+    //public static final String KEY_TITLE = "title";
 
     // ENROLLMENTS Table - column names
-    private static final String KEY_FACILITY = "facility";
-    private static final String KEY_MFL = "mfl";
-    private static final String KEY_PROGRAM = "program";
-    private static final String KEY_DESIGNATION = "designation";
-    private static final String KEY_FAILURE = "failure";
-    //private static final String KEY_COMMENT = "comment";
+    public static final String KEY_TID = "tid";
+    public static final String KEY_FACILITY = "facility";
+    public static final String KEY_MFL = "mfl";
+    public static final String KEY_PROGRAM = "program";
+    public static final String KEY_DESIGNATION = "designation";
+    public static final String KEY_FAILURE = "failure";
+    //public static final String KEY_COMMENT = "comment";
 
     // ROUNDS Table - column names
-    //private static final String KEY_TITLE = "title";
-    private static final String KEY_STARTS = "starts";
-    private static final String KEY_ENDS = "ends";
+    //public static final String KEY_TITLE = "title";
+    public static final String KEY_STARTS = "starts";
+    public static final String KEY_ENDS = "ends";
 
     // PANELS Table - column names
-    //private static final String KEY_RID = "rId";
-    private static final String KEY_RDATE = "rDate";
-    private static final String KEY_PANELS = "panels";
-    private static final String KEY_RECEIVER = "receiver";
+    //public static final String KEY_RID = "rId";
+    public static final String KEY_RDATE = "rDate";
+    public static final String KEY_PANELS = "panels";
+    public static final String KEY_RECEIVER = "receiver";
 
     // SETS Table - column names
-    //private static final String KEY_TITLE = "title";
+    //public static final String KEY_TITLE = "title";
 
     // FIELDS Table - column names
-    private static final String KEY_SID = "sId";
-    //private static final String KEY_TITLE = "title";
-    private static final String KEY_TAG = "tag";
+    public static final String KEY_SID = "sId";
+    //public static final String KEY_TITLE = "title";
+    public static final String KEY_TAG = "tag";
 
     // OPTIONS Table - column names
-    //private static final String KEY_TITLE = "title";
+    //public static final String KEY_TITLE = "title";
 
     // FIELD-OPTIONS Table - column names
-    //private static final String KEY_FID = "fId";
-    private static final String KEY_OID = "oId";
+    //public static final String KEY_FID = "fId";
+    public static final String KEY_OID = "oId";
 
     // PT Table - column names
-    //private static final String KEY_RID = "rId";
-    //private static final String KEY_CREATED_AT = "created_at";
-    //private static final String KEY_UPDATED_AT = "updated_at";
-    private static final String KEY_STATUS = "status";
+    //public static final String KEY_RID = "rId";
+    //public static final String KEY_CREATED_AT = "created_at";
+    //public static final String KEY_UPDATED_AT = "updated_at";
+    public static final String KEY_STATUS = "status";
 
     // RESULTS Table - column names
-    private static final String KEY_PTID = "ptId";
-    //private static final String KEY_FID = "fId";
-    private static final String KEY_RESPONSE = "response";
-    //private static final String KEY_COMMENT = "comment";
+    public static final String KEY_PTID = "ptId";
+    //public static final String KEY_FID = "fId";
+    public static final String KEY_RESPONSE = "response";
+    //public static final String KEY_COMMENT = "comment";
 
     // FEEDBACK Table - column names
-    private static final String KEY_ROUND = "round";
-    private static final String KEY_FEEDBACK = "feedback";
-    //private static final String KEY_COMMENT = "comment";
+    public static final String KEY_ROUND = "round";
+    public static final String KEY_FEEDBACK = "feedback";
+    //public static final String KEY_COMMENT = "comment";
 
     // Table Create Statements
     // Todo table create statement
@@ -137,13 +143,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + KEY_PASSWORD + " TEXT," + KEY_CREATED_AT + " DATETIME,"+ KEY_UPDATED_AT
             + " DATETIME" + ")";
 
+    private static final String CREATE_TABLE_FACILITY = "CREATE TABLE "
+            + TABLE_FACILITY + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NAME + " TEXT"
+            + KEY_MFL + " INTEGER" + ")";
+
     private static final String CREATE_TABLE_FAILURE = "CREATE TABLE "
             + TABLE_USER + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_TITLE + " TEXT" + ")";
 
+    private static final String CREATE_TABLE_DESIGNATION = "CREATE TABLE "
+            + TABLE_DESIGNATION + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_TITLE + " TEXT" + ")";
+
     private static final String CREATE_TABLE_ENROL = "CREATE TABLE "
-            + TABLE_FAILURE + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_FACILITY + " TEXT,"
-            + KEY_MFL + " INTEGER," + KEY_PROGRAM + " TEXT," + KEY_DESIGNATION + " TEXT,"
-            + KEY_FAILURE + " TEXT," + KEY_COMMENT + " TEXT" + ")";
+            + TABLE_FAILURE + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_TID + " INTEGER,"
+            + KEY_FACILITY + " TEXT," + KEY_MFL + " INTEGER," + KEY_PROGRAM + " INTEGER,"
+            + KEY_DESIGNATION + " TEXT," + KEY_FAILURE + " INTEGER," + KEY_COMMENT + " TEXT"
+            + KEY_CREATED_AT + " DATETIME,"+ KEY_UPDATED_AT + " DATETIME" + ")";
 
     private static final String CREATE_TABLE_ROUND = "CREATE TABLE "
             + TABLE_ROUND + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_TITLE + " TEXT"
@@ -189,7 +203,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // creating required tables
         db.execSQL(CREATE_TABLE_USER);
+        db.execSQL(CREATE_TABLE_FACILITY);
         db.execSQL(CREATE_TABLE_FAILURE);
+        db.execSQL(CREATE_TABLE_DESIGNATION);
         db.execSQL(CREATE_TABLE_ENROL);
         db.execSQL(CREATE_TABLE_ROUND);
         db.execSQL(CREATE_TABLE_PANEL);
@@ -215,109 +231,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_PANEL);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_ROUND);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_ENROL);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_DESIGNATION);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_FAILURE);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_FACILITY);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER);
 
         // create new tables
         onCreate(db);
     }
-    // ------------------------ begin "users" table methods ----------------//
-
-    /**
-     * Creating a user
-     */
-    // ------------------------ begin "failure" table methods ----------------//
-
-    /**
-     * get single failure
-     */
-    public Failure getFailure(int id) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        String selectQuery = "SELECT  * FROM " + TABLE_FAILURE + " WHERE "
-                + KEY_ID + " = " + id;
-
-        Log.e(LOG, selectQuery);
-
-        Cursor c = db.rawQuery(selectQuery, null);
-
-        if (c != null)
-            c.moveToFirst();
-
-        Failure failure = new Failure();
-        failure.setId(c.getInt(c.getColumnIndex(KEY_ID)));
-        failure.setTitle((c.getString(c.getColumnIndex(KEY_TITLE))));
-
-        return failure;
-    }
-
-    /**
-     * getting all failures
-     * */
-    public List<Failure> getAllFailures() {
-        List<Failure> failures = new ArrayList<Failure>();
-        String selectQuery = "SELECT  * FROM " + TABLE_FAILURE;
-
-        Log.e(LOG, selectQuery);
-
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = db.rawQuery(selectQuery, null);
-
-        // looping through all rows and adding to list
-        if (c.moveToFirst()) {
-            do {
-                Failure failure = new Failure();
-                failure.setId(c.getInt((c.getColumnIndex(KEY_ID))));
-                failure.setTitle((c.getString(c.getColumnIndex(KEY_TITLE))));
-
-                // adding to failures list
-                failures.add(failure);
-            } while (c.moveToNext());
-        }
-
-        return failures;
-    }
-
-    /**
-     * getting failure count
-     */
-    public int getFailureCount() {
-        String countQuery = "SELECT  * FROM " + TABLE_FAILURE;
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(countQuery, null);
-
-        int count = cursor.getCount();
-        cursor.close();
-
-        // return count
-        return count;
-    }
-
-    /**
-     * Updating a failure
-
-    public int updateFailure(Failure failure) {
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(KEY_ID, failure.getId());
-        values.put(KEY_TITLE, failure.getTitle());
-
-        // updating row
-        return db.update(TABLE_FAILURE, values, KEY_ID + " = ?",
-                new String[] { String.valueOf(failure.getId()) });
-    } */
-
-    /**
-     * Deleting a failure
-
-    public void deleteFailure(long fId) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(TABLE_FAILURE, KEY_ID + " = ?",
-                new String[] { String.valueOf(fId) });
-    } */
-
-    // ------------------------ end "failure" table methods ----------------//
 
     // closing database
     public void closeDB() {

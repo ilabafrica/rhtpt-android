@@ -5,17 +5,24 @@ package pt.rht.Models;
  */
 
 public class Result {
-    int id;
+    long id;
     int ptId;
     int fId;
     String response;
     String comment;
 
     // constructors
+    public Result(long id, int ptId, int fId, String response, String comment){
+        this.id = id;
+        this.ptId = ptId;
+        this.fId = fId;
+        this.response = response;
+        this.comment = comment;
+    }
     public Result() {
     }
     // setters
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -36,7 +43,7 @@ public class Result {
     }
 
     // getters
-    public int getId() {
+    public long getId() {
         return this.id;
     }
 
