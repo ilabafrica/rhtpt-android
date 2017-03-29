@@ -16,8 +16,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import pt.rht.Session.Session;
+
 public class DashboardActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private Session session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,7 +101,7 @@ public class DashboardActivity extends AppCompatActivity
         } else if (id == R.id.nav_help) {
 
         } else if (id == R.id.nav_signout) {
-
+            logout();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -131,5 +135,10 @@ public class DashboardActivity extends AppCompatActivity
             default:
                 break;
         }
+    }
+    private void logout(){
+        session.setLoggedin(false);
+        finish();
+        startActivity(new Intent(this, LoginActivity.class));
     }
 }

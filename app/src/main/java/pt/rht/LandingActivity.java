@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.content.Intent;
 
 public class LandingActivity extends AppCompatActivity {
 
@@ -30,6 +31,7 @@ public class LandingActivity extends AppCompatActivity {
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    Intent intent = new Intent();
                     switch (item.getItemId()) {
                         case R.id.action_register:
                             textRegister.setVisibility(View.VISIBLE);
