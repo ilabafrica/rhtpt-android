@@ -25,6 +25,8 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registered! Login Me.</string>
 
     <!-- Strings related to registration -->
     <string name="prompt_full_name">Full Name</string>
@@ -32,7 +34,7 @@
     <string name="prompt_gender">Gender</string>
     <string name="prompt_dob">Date Of Birth</string>
     <string name="prompt_mobile_number">Mobile Number</string>
-    <string name="prompt_email_address">Gender</string>
+    <string name="prompt_email_address">Email Address</string>
     <string name="prompt_facility_name">Facility Name</string>
     <string name="prompt_mfl_code">MFL Code</string>
     <string name="prompt_program">Program</string>

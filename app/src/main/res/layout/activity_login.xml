@@ -33,7 +33,10 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="150dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:minHeight="100dp"
+                android:maxHeight="100dp"
                 android:src="@drawable/coa"
                 android:layout_gravity="center" />
 
@@ -46,7 +49,7 @@
                 android:layout_margin="1dp"
                 android:gravity="center"
                 android:text="@string/app_title"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/button_background_pressed_end" />
 
@@ -87,6 +90,18 @@
                 android:background="@color/accent_color"
                 android:textColor="@color/text"
                 android:onClick="login"/>
+            <!-- Link to Register Screen -->
+
+            <Button
+                android:id="@+id/btnLinkToRegisterScreen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dip"
+                android:background="@null"
+                android:text="@string/btn_link_to_register"
+                android:textAllCaps="false"
+                android:textColor="@color/wisteria"
+                android:textSize="15dp" />
 
         </LinearLayout>
     </ScrollView>

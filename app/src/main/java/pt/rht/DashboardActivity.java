@@ -15,6 +15,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 
 import pt.rht.Session.Session;
 
@@ -86,19 +88,39 @@ public class DashboardActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        AlertDialog.Builder alert = new AlertDialog.Builder(DashboardActivity.this);
+        alert.setMessage("There is no ongoing PT round. You will be notified when we're set.");
+        alert.setPositiveButton("OK",
+        new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog,
+                                int which) {
+                Toast.makeText(getApplicationContext(),"Yes is clicked",Toast.LENGTH_LONG).show();
+            }
+        });
         if (id == R.id.nav_enrol) {
-            Toast.makeText(getApplicationContext(),"Enrollment",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"Enrollment",Toast.LENGTH_SHORT).show();
+            alert.setTitle("Enrollments");
+            alert.show();
 
         } else if (id == R.id.nav_panels) {
+            alert.setTitle("Panels");
+            alert.show();
 
         } else if (id == R.id.nav_tests) {
+            alert.setTitle("Analysis Results");
+            alert.show();
 
         } else if (id == R.id.nav_feedback) {
+            alert.setTitle("Feedback");
+            alert.show();
 
         } else if (id == R.id.nav_profile) {
+            alert.setTitle("Profile");
+            alert.show();
 
         } else if (id == R.id.nav_help) {
+            alert.setTitle("Help");
+            alert.show();
 
         } else if (id == R.id.nav_signout) {
             logout();

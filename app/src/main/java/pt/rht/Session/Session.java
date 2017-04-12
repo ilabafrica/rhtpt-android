@@ -7,9 +7,6 @@ package pt.rht.Session;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/**
- * Created by Administrator on 5/5/2016.
- */
 public class Session {
     SharedPreferences prefs;
     SharedPreferences.Editor editor;

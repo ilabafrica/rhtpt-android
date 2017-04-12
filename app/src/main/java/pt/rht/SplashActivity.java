@@ -20,6 +20,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
+        db = new DatabaseHelper(this);
         finish();
     }
 }

@@ -148,13 +148,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + KEY_MFL + " INTEGER" + ")";
 
     private static final String CREATE_TABLE_FAILURE = "CREATE TABLE "
-            + TABLE_USER + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_TITLE + " TEXT" + ")";
+            + TABLE_FAILURE + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_TITLE + " TEXT" + ")";
 
     private static final String CREATE_TABLE_DESIGNATION = "CREATE TABLE "
             + TABLE_DESIGNATION + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_TITLE + " TEXT" + ")";
 
     private static final String CREATE_TABLE_ENROL = "CREATE TABLE "
-            + TABLE_FAILURE + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_TID + " INTEGER,"
+            + TABLE_ENROL + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_TID + " INTEGER,"
             + KEY_FACILITY + " TEXT," + KEY_MFL + " INTEGER," + KEY_PROGRAM + " INTEGER,"
             + KEY_DESIGNATION + " TEXT," + KEY_FAILURE + " INTEGER," + KEY_COMMENT + " TEXT"
             + KEY_CREATED_AT + " DATETIME,"+ KEY_UPDATED_AT + " DATETIME" + ")";

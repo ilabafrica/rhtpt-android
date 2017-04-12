@@ -1,7 +1,7 @@
 package pt.rht.Models;
 
 /**
- * Created by ilabafrica on 23/03/2017.
+ * Created by Kitsao on 23/03/2017.
  */
 
 public class Result {
