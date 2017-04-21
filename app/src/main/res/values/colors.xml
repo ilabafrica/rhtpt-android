@@ -51,5 +51,8 @@
 
     <color name="white">#FFFFFF</color>
     <color name="wisteria">#8E44AD</color>
+    <color name="blue">#0D47A1</color>
+    <color name="amber">#FFE082</color>
+    <color name="bg">#455A64</color>
 
 </resources>

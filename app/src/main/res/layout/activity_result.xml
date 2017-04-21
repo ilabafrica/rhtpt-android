@@ -1,0 +1,527 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="pt.rht.RegUserInfoActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:id="@+id/results_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ptForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:text="@string/pt_form"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/button_background_pressed_end" />
+            <!-- PT Panel Dates -->
+            <TextView
+                android:id="@+id/tvDates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pt_dates"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="@dimen/add_edit_textsize"
+                android:paddingRight="25dp"
+                android:layout_weight="0.34" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/view_padding">
+
+                <EditText
+                    android:id="@+id/date_received"
+                    android:hint="@string/prompt_date_received"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="8"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                <ImageView
+                    android:id="@+id/image_date_received"
+                    android:src="@android:drawable/ic_menu_my_calendar"
+                    android:layout_weight="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/view_padding">
+
+                <EditText
+                    android:id="@+id/date_constituted"
+                    android:hint="@string/prompt_date_constituted"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="5.71"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                <ImageView
+                    android:id="@+id/image_date_constituted"
+                    android:src="@android:drawable/ic_menu_my_calendar"
+                    android:layout_weight="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/view_padding">
+
+                <EditText
+                    android:id="@+id/date_tested"
+                    android:hint="@string/prompt_date_tested"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="9.66"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                <ImageView
+                    android:id="@+id/image_date_tested"
+                    android:src="@android:drawable/ic_menu_my_calendar"
+                    android:layout_weight="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/pt_form"
+                    android:inputType="text"
+                    android:padding="@dimen/view_padding"
+                    android:textSize="@dimen/add_edit_textsize" />
+
+            </android.support.design.widget.TextInputLayout>
+            <!-- HIV Test kits details -->
+            <TextView
+                android:id="@+id/tvKits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pt_dates"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="@dimen/add_edit_textsize"
+                android:paddingRight="25dp"
+                android:layout_weight="0.34" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/test_1_kit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/test_1_kit_lot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_test_1_kit_lot"
+                    android:inputType="text"
+                    android:padding="@dimen/view_padding"
+                    android:textSize="@dimen/add_edit_textsize" />
+
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/view_padding">
+
+                <EditText
+                    android:id="@+id/test_1_expiry_date"
+                    android:hint="@string/prompt_test_1_kit_expiry"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="8.71"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                <ImageView
+                    android:id="@+id/image_test_1_expiry"
+                    android:src="@android:drawable/ic_menu_my_calendar"
+                    android:layout_weight="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/test_2_kit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/test_2_kit_lot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_test_2_kit_lot"
+                    android:inputType="text"
+                    android:padding="@dimen/view_padding"
+                    android:textSize="@dimen/add_edit_textsize" />
+
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/view_padding">
+
+                <EditText
+                    android:id="@+id/test_2_expiry_date"
+                    android:hint="@string/prompt_test_2_kit_expiry"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="8"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                <ImageView
+                    android:id="@+id/image_test_2_expiry"
+                    android:src="@android:drawable/ic_menu_my_calendar"
+                    android:layout_weight="4.56"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/test_3_kit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/test_3_kit_lot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_test_2_kit_lot"
+                    android:inputType="text"
+                    android:padding="@dimen/view_padding"
+                    android:textSize="@dimen/add_edit_textsize" />
+
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/view_padding">
+
+                <EditText
+                    android:id="@+id/test_3_expiry_date"
+                    android:hint="@string/prompt_test_2_kit_expiry"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="8"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                <ImageView
+                    android:id="@+id/image_test_3_expiry"
+                    android:src="@android:drawable/ic_menu_my_calendar"
+                    android:layout_weight="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <!-- PT Panel 1 Results -->
+            <TextView
+                android:id="@+id/tvPanel1Results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/panel_1_results"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="@dimen/add_edit_textsize"
+                android:paddingRight="25dp"
+                android:layout_weight="0.34" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/pt_1_test_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+            <!-- PT Panel 2 Results -->
+            <TextView
+                android:id="@+id/tvPanel2Results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/panel_2_results"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="@dimen/add_edit_textsize"
+                android:paddingRight="25dp"
+                android:layout_weight="0.34" />
+            <!-- PT Panel 3 Results -->
+            <TextView
+                android:id="@+id/tvPanel3Results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/panel_3_results"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="@dimen/add_edit_textsize"
+                android:paddingRight="25dp"
+                android:layout_weight="0.34" />
+            <!-- PT Panel 4 Results -->
+            <TextView
+                android:id="@+id/tvPanel4Results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/panel_4_results"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="@dimen/add_edit_textsize"
+                android:paddingRight="25dp"
+                android:layout_weight="0.34" />
+            <!-- PT Panel 5 Results -->
+            <TextView
+                android:id="@+id/tvPanel5Results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/panel_5_results"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="@dimen/add_edit_textsize"
+                android:paddingRight="25dp"
+                android:layout_weight="0.34" />
+            <!-- PT Panel 6 Results -->
+            <TextView
+                android:id="@+id/tvPanel6Results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/panel_6_results"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="@dimen/add_edit_textsize"
+                android:paddingRight="25dp"
+                android:layout_weight="0.34" />
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/view_padding">
+
+                <TextView
+                    android:id="@+id/text_view_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_gender"
+                    android:textSize="@dimen/add_edit_textsize"
+                    android:paddingRight="25dp"/>
+                <RadioGroup
+                    android:id="@+id/radio_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="25dp"
+                    >
+
+
+                    <RadioButton
+                        android:id="@+id/radio_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_male"
+                        android:textSize="@dimen/add_edit_textsize"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_female"
+                        android:textSize="@dimen/add_edit_textsize"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/view_padding">
+
+                <EditText
+                    android:id="@+id/dob"
+                    android:hint="@string/prompt_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="8"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+                <ImageView
+                    android:id="@+id/image_view_hire_date"
+                    android:src="@android:drawable/ic_menu_my_calendar"
+                    android:layout_weight="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_mobile_number"
+                    android:inputType="phone"
+                    android:padding="@dimen/view_padding"
+                    android:textSize="@dimen/add_edit_textsize" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_email_address"
+                    android:inputType="text" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/facility_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_facility_name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/mfl_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_mfl_code"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/program"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/designation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/addressee_failure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnRegister"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/action_sign_in"
+                android:textStyle="bold"
+                android:background="@color/accent_color"
+                android:textColor="@color/text" />
+            <!-- Link to Login Screen -->
+
+            <Button
+                android:id="@+id/btnLinkToLoginScreen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dip"
+                android:background="@null"
+                android:text="@string/btn_link_to_login"
+                android:textAllCaps="false"
+                android:textColor="@color/wisteria"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

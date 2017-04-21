@@ -3,6 +3,7 @@ package pt.rht;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -51,6 +52,33 @@ public class RegUserInfoActivity extends AppCompatActivity implements DatePicker
         login = (Button)findViewById(R.id.btnRegister);
         register = (Button)findViewById(R.id.btnLinkToLoginScreen);
         calendarImage = (ImageView)findViewById(R.id.image_view_hire_date);
+
+        spProg = (Spinner) findViewById(R.id.program);
+        // Create an ArrayAdapter using the string array and a default spinner layoutß
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.programs_array, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spProg.setAdapter(adapter);
+
+        spDes = (Spinner) findViewById(R.id.designation);
+        // Create an ArrayAdapter using the string array and a default spinner layoutß
+        ArrayAdapter<CharSequence> adapter_des = ArrayAdapter.createFromResource(this,
+                R.array.designation_array, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter_des.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spDes.setAdapter(adapter_des);
+
+        spFailure = (Spinner) findViewById(R.id.addressee_failure);
+        // Create an ArrayAdapter using the string array and a default spinner layoutß
+        ArrayAdapter<CharSequence> adapter_failure = ArrayAdapter.createFromResource(this,
+                R.array.failure_array, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter_failure.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spFailure.setAdapter(adapter_failure);
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 

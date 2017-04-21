@@ -17,6 +17,7 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Submit</string>
+    <string name="action_submit">Submit</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
@@ -56,7 +57,114 @@
     <string name="action_feedback">Feedback</string>
     <string name="action_panels">PT Panels</string>
     <string name="action_profile">Profile</string>
+    <string name="action_back">Back</string>
 
     <string name="string_male">Male</string>
     <string name="string_female">Female</string>
+
+    <string name="string_facility_label">MALAKISI HEALTH CENTER</string>
+    <string name="string_round_label">Round 16</string>
+    <string name="string_shipper_label">AMREF</string>
+    <string name="string_panels_label">6</string>
+    <string name="string_date_shipped_label">20-02-2017</string>
+
+    <string name="facility">Facility</string>
+    <string name="round">Round</string>
+    <string name="shipper">Shipping Agent</string>
+    <string name="panels">Panels</string>
+    <string name="date_shipped">Date Shipped</string>
+    <string name="date_received">Date Received</string>
+    <string name="panels_received">Panels Received</string>
+    <string name="condition">Condition</string>
+    <string name="receiver">Received By</string>
+
+    <string name="starts">Starts</string>
+    <string name="ends">Ends</string>
+    <string name="prompt_tester">Tester</string>
+    <string name="start_date">01-02-2017</string>
+    <string name="end_date">30-04-2017</string>
+    <string name="uid">100800</string>
+    <string name="tester">MAYOYO EDITH KEMUMA</string>
+    <string name="program">PMTCT</string>
+
+    <string name="string_feedback">Feedback</string>
+    <string name="string_reason">Reason</string>
+    <string name="string_comment">Comment</string>
+    <string name="feedback">Unsatisfactory</string>
+    <string name="reason">Incomplete Results</string>
+    <string name="comment">Please institute the necessary corrective measures before the next round of PT</string>
+    <string name="action_download">Download</string>
+
+    <string name="pt_form">HIV PT RESULTS ENTRY</string>
+    <string name="pt_dates">PT PANEL DATES</string>
+    <string name="kit_info">HIV TEST KITS DETAILS</string>
+    <string name="panel_1_results">PT PANEL 1 RESULTS</string>
+    <string name="panel_2_results">PT PANEL 2 RESULTS</string>
+    <string name="panel_3_results">PT PANEL 3 RESULTS</string>
+    <string name="panel_4_results">PT PANEL 4 RESULTS</string>
+    <string name="panel_5_results">PT PANEL 5 RESULTS</string>
+    <string name="panel_6_results">PT PANEL 6 RESULTS</string>
+    <string name="remarks">REMARKS</string>
+
+    <string name="prompt_date_received">Date PT Panel Received</string>
+    <string name="prompt_date_constituted">Date PT Panel Constituted</string>
+    <string name="prompt_date_tested">Date PT Panel Tested</string>
+
+    <string name="prompt_test_1_kit_name">Test 1 Kit Name</string>
+    <string name="prompt_test_1_kit_lot">Test 1 Kit Lot No.</string>
+    <string name="prompt_test_1_kit_expiry">Test 1 Kit Expiry Date</string>
+    <string name="prompt_test_2_kit_name">Test 2 Kit Name</string>
+    <string name="prompt_test_2_kit_lot">Test 2 Kit Lot No.</string>
+    <string name="prompt_test_2_kit_expiry">Test 2 Kit Expiry Date</string>
+    <string name="prompt_test_3_kit_name">Test 3 Kit Name</string>
+    <string name="prompt_test_3_kit_lot">Test 3 Kit Lot No.</string>
+    <string name="prompt_test_3_kit_expiry">Test 3 Kit Expiry Date</string>
+
+    <string name="prompt_test_1_results">Test 1 Results</string>
+    <string name="prompt_test_2_results">Test 2 Results</string>
+    <string name="prompt_test_3_results">Test 3 Results</string>
+
+    <string-array name="programs_array">
+        <item>Laboratory</item>
+        <item>PMTCT</item>
+        <item>PSC/CCC</item>
+        <item>VCT</item>
+        <item>VMMC</item>
+        <item>PITC</item>
+        <item>HBTC</item>
+    </string-array>
+    <string-array name="designation_array">
+        <item>Nurse</item>
+        <item>Counsellor</item>
+        <item>Lab Tech.</item>
+        <item>RCO</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="failure_array">
+        <item>Transferred</item>
+        <item>Resigned</item>
+        <item>On Leave</item>
+        <item>Off Duty</item>
+        <item>Deceased</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="kits_array">
+        <item>Determine</item>
+        <item>KHB</item>
+        <item>First Response</item>
+        <item>Unigold</item>
+    </string-array>
+    <string-array name="test_results_array">
+        <item>Reactive</item>
+        <item>Non Reactive</item>
+        <item>Invalid</item>
+        <item>Not Done</item>
+    </string-array>
+    <string-array name="final_results_array">
+        <item>Positive</item>
+        <item>Negative</item>
+        <item>Invalid</item>
+        <item>Not Done</item>
+        <item>Indeterminate</item>
+    </string-array>
 </resources>
