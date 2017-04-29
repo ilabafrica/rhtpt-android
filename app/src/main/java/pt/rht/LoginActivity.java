@@ -27,6 +27,8 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import java.lang.String;
 import pt.rht.Api.Rest;
 /**
  * A login screen that offers login via username/password.
@@ -43,7 +45,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private User user;
 
     private ProgressDialog pDialog;
-    private static final String TAG = RegUserInfoActivity.class.getSimpleName();
+    private static final String TAG = RegisterActivity.class.getSimpleName();
 
 
     @Override
@@ -182,7 +184,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      * Function to call register screen
      */
     private void register(){
-        Intent i = new Intent(getApplicationContext(), RegUserInfoActivity.class);
+        Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
         startActivity(i);
         finish();
     }
@@ -195,5 +197,44 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void hideDialog() {
         if (pDialog.isShowing())
             pDialog.dismiss();
+    }
+    @Override
+    public void onBackPressed() {
+        // disable going back to the MainActivity
+        moveTaskToBack(true);
+    }
+
+    public void onLoginSuccess() {
+        login.setEnabled(true);
+        finish();
+    }
+
+    public void onLoginFailed() {
+        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
+
+        login.setEnabled(true);
+    }
+
+    public boolean validate() {
+        boolean valid = true;
+
+        String username = etUsername.getText().toString();
+        String password = etPass.getText().toString();
+
+        if (username.isEmpty()) {
+            //username.setError("Enter a valid UID");
+            valid = false;
+        } else {
+            //username.setError(null);
+        }
+
+        if (password.isEmpty() || password.length() < 4 || password.length() > 10) {
+            //password.setError("Check password length.");
+            valid = false;
+        } else {
+            //password.setError(null);
+        }
+
+        return valid;
     }
 }

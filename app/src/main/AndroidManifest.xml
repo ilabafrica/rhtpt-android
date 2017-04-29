@@ -34,8 +34,7 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".RegUserInfoActivity" />
-        <activity android:name=".RegPtInfoActivity" />
+        <activity android:name=".RegisterActivity" />
         <activity
             android:name=".DashboardActivity"
             android:label="@string/title_activity_dashboard"
@@ -44,7 +43,8 @@
         <activity android:name=".RoundActivity" />
         <activity android:name=".PanelActivity" />
         <activity android:name=".ResultActivity" />
-        <activity android:name=".FeedbackActivity"></activity>
+        <activity android:name=".FeedbackActivity" />
+        <activity android:name=".SlideActivity"></activity>
     </application>
 
 </manifest>

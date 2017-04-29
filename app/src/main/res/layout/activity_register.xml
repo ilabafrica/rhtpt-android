@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="pt.rht.RegUserInfoActivity">
+    tools:context="pt.rht.RegisterActivity">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
@@ -102,26 +102,18 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:orientation="horizontal"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/view_padding">
-
-                <EditText
-                    android:id="@+id/dob"
-                    android:hint="@string/prompt_dob"
-                    android:layout_width="wrap_content"
-                    android:layout_weight="8"
-                    android:layout_height="wrap_content"
-                    android:gravity="left" />
-                <ImageView
-                    android:id="@+id/image_view_hire_date"
-                    android:src="@android:drawable/ic_menu_my_calendar"
-                    android:layout_weight="5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/dob"
+                android:hint="Click to Set DOB"
+                android:padding="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#000"
+                android:background="#b1d9b2" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -181,91 +173,38 @@
 
             </android.support.design.widget.TextInputLayout>
 
-
-            <LinearLayout
+            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
+                android:id="@+id/program"
+                android:spinnerMode="dialog"
+                android:textSize="@dimen/add_edit_textsize"
                 android:padding="@dimen/view_padding"
-                android:weightSum="1">
+                android:prompt="@string/prompt_program"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:entries="@array/programs_array" />
 
-                <TextView
-                    android:id="@+id/tvProgram"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/prompt_program"
-                    android:textColor="@color/blue"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/add_edit_textsize"
-                    android:paddingRight="25dp"
-                    android:layout_weight="0.34" />
-                <Spinner
-                    android:id="@+id/program"
-                    android:hint="@string/prompt_program"
-                    android:layout_width="wrap_content"
-                    android:textSize="@dimen/add_edit_textsize"
-                    android:paddingRight="25dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.48" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
+                android:id="@+id/designation"
+                android:spinnerMode="dialog"
+                android:textSize="@dimen/add_edit_textsize"
                 android:padding="@dimen/view_padding"
-                android:weightSum="1">
+                android:prompt="@string/prompt_designation"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:entries="@array/designation_array" />
 
-                <TextView
-                    android:id="@+id/tvDes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/prompt_designation"
-                    android:textColor="@color/blue"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/add_edit_textsize"
-                    android:paddingRight="25dp"
-                    android:layout_weight="0.34" />
-                <Spinner
-                    android:id="@+id/designation"
-                    android:hint="@string/prompt_program"
-                    android:layout_width="wrap_content"
-                    android:textSize="@dimen/add_edit_textsize"
-                    android:paddingRight="25dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.46" />
-
-            </LinearLayout>
-            <LinearLayout
+            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
+                android:id="@+id/addressee_failure"
+                android:spinnerMode="dialog"
+                android:textSize="@dimen/add_edit_textsize"
                 android:padding="@dimen/view_padding"
-                android:weightSum="1">
-
-                <TextView
-                    android:id="@+id/tvFailure"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/prompt_addresee_failure"
-                    android:textColor="@color/blue"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/add_edit_textsize"
-                    android:paddingRight="25dp"
-                    android:layout_weight="0.34" />
-                <Spinner
-                    android:id="@+id/addressee_failure"
-                    android:layout_width="wrap_content"
-                    android:textSize="@dimen/add_edit_textsize"
-                    android:paddingRight="25dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.46" />
-
-            </LinearLayout>
+                android:prompt="@string/prompt_addresee_failure"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:entries="@array/failure_array" />
 
             <Button
                 android:id="@+id/btnRegister"
